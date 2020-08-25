@@ -1,0 +1,9 @@
+Display messages of fun stuff to do/read/watch on breaks
+
+Have a timer animation that activates when that timer is on
+
+Track the tasks the user writes in (to-do list)
+
+Work with Slack to change their status to either working or breaking
+
+Settings tab to change timing
