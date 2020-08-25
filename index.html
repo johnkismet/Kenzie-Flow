@@ -8,39 +8,59 @@
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
       <script src="https://kit.fontawesome.com/a765cfff15.js" crossorigin="anonymous"></script>
    </head>
+
    <body>
+
+
       <nav class="navbar">
-         <h1 class="navh1">Kenzie <strong>FLOW</strong></h1>
+         <h1 class="navh1">Kenzie<em>FLOW</em></h1>
          <a href="about.html"class="navAbout">Click here to learn more about Kenzie FLOW</a>
       </nav>
-      <h1 class="flowCycles"></h1>
+
+
       <div class="timers">
-         <div id="flow" class="flowBox">
+
+         <!--FLOW BOX -->
+         <div id="flowBox" class="flowBox">
             <i class="far fa-clock"></i>
             <h2 class="flow">Flow</h2>
-            <h4 id="p1"></h4>
+            <h4 id="flowh4"></h4>
             <div class="time" id="timerDiv">Time remaining: <span id="flowTimer"></span></div>
+
             <button id="flowStartBtn" onclick="unpause(); flowStart()" class="start">Start</button>
-            <button id="flowPauseBtn" onclick="reset(); flowPause()" class="pause">Pause</button>
+            <!-- <button id="flowPauseBtn" onclick="reset(); flowPause()" class="pause">Pause</button> -->
+
          </div>
-         <div id="short" class="shortBreak">
+
+         <!-- SHORT BREAK BOX -->
+         <div id="shortBox" class="shortBreak">
             <i class="far fa-clock"></i>
             <h2 class="short">Short Break</h2>
-            <h4 id="p2"></h4>
+            <h4 id="shorth4"></h4>
             <div class="time" id="stimerDiv">Time remaining: <span id="shortTimer"></span></div>
-            <button onclick="unpause(); shortStart()" class="start">Start</button>
-            <button id="button2" onclick="reset(); shortPause()" class="pause">Pause</button>
+
+            <button id="shortStartBtn" onclick="unpause(); shortStart()" class="start">Start</button>
+
          </div>
-         <div id="long" class="longBreak">
+
+         <!-- LONG BREAK BOX -->
+         <div id="longBox" class="longBreak">
             <i class="far fa-clock"></i>
             <h2 class="long">Long Break</h2>
-            <h4 id="p3"></h4>
+            <h4 id="longh4"></h4>
             <div class="time" id="ltimerDiv">Time remaining: <span id="longTimer"></span></div>
-            <button id="startButton" onclick="unpause(); longStart()" class="start">Start</button>
-            <button id="pauseBtn" onclick="reset(); longPause()" class="pause">Pause</button>
+
+            <button id="longStartBtn" onclick="unpause(); longStart()" class="start">Start</button>
+            <button id="longPauseBtn" onclick="reset(); longPause()" class="pause">Pause</button>
          </div>
+
       </div>
+
+
       <h3>Made by John Anderson & Russ Livermore, Kenzie Academy SE July 2020 Cohort</h3>
+
+
+
       <script src="script.js"></script>
    </body>
 </html>
