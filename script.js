@@ -1,73 +1,99 @@
-// Global variables
-let flowTime = (document.getElementById('flowTimer').innerHTML = 00 + ':' + '03');
-let shortTime = (document.getElementById('shortTimer').innerHTML = 5 + ':' + '03');
-let longTime = (document.getElementById('longTimer').innerHTML = 15 + ':' + '03');
+// default timer values
+let flowTime = (document.getElementById('flowTimer').innerHTML = 25 + ':' + '00');
+let shortTime = (document.getElementById('shortTimer').innerHTML = 5 + ':' + '00');
+let longTime = (document.getElementById('longTimer').innerHTML = 15 + ':' + '00');
 
-const alarm = document.getElementById('alarm');
+// global variables
 let flowCount = 0;
-let paused = false;
+var paused = false;
 var started = false;
 let played = false;
+let hasPlayed = false;
 
-// Functions
+console.log(paused);
+
+// default html
+
+document.getElementById('flowPauseBtn').style.display = 'none';
+document.getElementById('shortPauseBtn').style.display = 'none';
+document.getElementById('longPauseBtn').style.display = 'none';
+
+// functions
+
 function unpause() {
 	paused = false;
 }
-function reset() {
+function unstart() {
 	started = false;
-	paused = false;
-	// set the pause buttons to no display
-	document.getElementById('flowPauseBtn').style.display = 'none';
-	document.getElementById('shortPauseBtn').style.display = 'none';
-	document.getElementById('longPauseBtn').style.display = 'none';
+}
 
-	// set the start buttons to display
+function flowReset() {
+	document.getElementById('flowTimer').innerHTML = 00 + ':' + '03';
+	document.getElementById('flowPauseBtn').style.display = 'none';
 	document.getElementById('flowStartBtn').style.display = '';
 	document.getElementById('shortBox').style.display = '';
 	document.getElementById('longBox').style.display = '';
-
-	document.getElementById('title').innerHTML = 'Kenzie Flow';
-
-	// set the boxes to have the correct time
-
-	// flow
-	document.getElementById('flowh4').style.display = 'none';
-	document.getElementById('timerDiv').style.display = '';
+	document.getElementById('goBack').remove();
+	document.getElementById('flowh4').remove();
+	document.getElementById('flowPauseBtn').innerHTML = 'Pause';
 	document.getElementById('flowTimer').style.display = '';
-	// short
-	document.getElementById('shorth4').style.display = 'none';
-	document.getElementById('stimerDiv').style.display = '';
-	document.getElementById('shortTimer').style.display = '';
-	// long
-	document.getElementById('longh4').style.display = 'none';
-	document.getElementById('ltimerDiv').style.display = '';
-	document.getElementById('longTimer').style.display = '';
+	document.getElementById('timerDiv').style.display = '';
+	document.getElementById('flowBox').style.background = 'rgba(87, 105, 197, 0.87)';
+
+	hasPlayed = false;
+	document.getElementById('title').innerHTML = 'Kenzie Flow';
 }
 
-function displayStart() {}
-function displayPause() {}
+function shortReset() {
+	document.getElementById('shortTimer').innerHTML = 00 + ':' + '03';
+	document.getElementById('shortPauseBtn').style.display = 'none';
+	document.getElementById('shortStartBtn').style.display = '';
+	document.getElementById('flowBox').style.display = '';
+	document.getElementById('longBox').style.display = '';
+	document.getElementById('goBack').remove();
+	document.getElementById('shorth4').remove();
+	document.getElementById('shortPauseBtn').innerHTML = 'Pause';
+	document.getElementById('shortTimer').style.display = '';
+	document.getElementById('stimerDiv').style.display = '';
+	document.getElementById('shortBox').style.background = 'rgba(87, 105, 197, 0.87)';
+	hasPlayed = false;
+	document.getElementById('title').innerHTML = 'Kenzie Flow';
+}
+
+function longReset() {
+	document.getElementById('longTimer').innerHTML = 00 + ':' + '03';
+	document.getElementById('longPauseBtn').style.display = 'none';
+	document.getElementById('longStartBtn').style.display = '';
+	document.getElementById('flowBox').style.display = '';
+	document.getElementById('shortBox').style.display = '';
+	document.getElementById('goBack').remove();
+	document.getElementById('longh4').remove();
+	document.getElementById('longPauseBtn').innerHTML = 'Pause';
+	document.getElementById('longTimer').style.display = '';
+	document.getElementById('ltimerDiv').style.display = '';
+	document.getElementById('longBox').style.background = 'rgba(87, 105, 197, 0.87)';
+	hasPlayed = false;
+	document.getElementById('title').innerHTML = 'Kenzie Flow';
+}
 
 function flowStart() {
+	started = true;
 	if (paused === true) {
+		console.log("can't start, paused = true");
 		return;
 	}
-	document.getElementById('flowStartBtn').style.display = 'none';
+	if (hasPlayed === false) {
+		startTimer();
+		hasPlayed = true;
+	}
+
+	console.log('Start!');
+	// Style handling
 	document.getElementById('flowBox').style.background = '#4a75ee';
+	document.getElementById('flowPauseBtn').style.display = '';
+	document.getElementById('flowStartBtn').style.display = 'none';
 	document.getElementById('shortBox').style.display = 'none';
 	document.getElementById('longBox').style.display = 'none';
-
-	// dynamically create pause button
-	if (started === false && played === false) {
-		var pause = document.createElement('button');
-		pause.setAttribute('id', 'flowPauseBtn');
-		pause.setAttribute('class', 'pause');
-		pause.setAttribute('onclick', 'reset(); flowPause()');
-		pause.innerHTML = 'Pause';
-		document.getElementById('flowBox').appendChild(pause);
-		started = true;
-	} else if (started === false) {
-		document.getElementById('flowPauseBtn').style.display = '';
-	}
 
 	// timer
 	var presentTime = document.getElementById('flowTimer').innerHTML;
@@ -78,37 +104,41 @@ function flowStart() {
 		m = m - 1;
 	}
 
-	// timer done statement
 	if (m < 0) {
 		flowCount++;
-		console.log(`Flow count: ${flowCount}`);
 		soundAlarm();
+		console.log(`Flow count: ${flowCount}`);
 
-		// Remove time text in place of the nice message
+		document.getElementById('flowPauseBtn').style.display = 'none';
+		var newButton = document.createElement('button');
+		newButton.innerHTML = 'Go Back';
+		newButton.setAttribute('id', 'goBack');
+		newButton.setAttribute('class', 'pause');
+		newButton.setAttribute('onclick', 'flowReset()');
+		// var box = getElementById('flowBox');
+		document.getElementById('flowBox').appendChild(newButton);
+
+		// remove time text
 		document.getElementById('flowTimer').style.display = 'none';
 		document.getElementById('timerDiv').style.display = 'none';
 
-		// if under 4 > Have a short break, and make the pause button say Go Back
-		// if 4 > Have a long break, and make pause button say Go Back
+		// display end message
 		if (flowCount < 4) {
-			document.getElementById(
-				'flowh4'
-			).innerHTML = `Good work! Have a short break :) <br> Flow Cycles: ${flowCount}`;
-			document.getElementById('flowh4').style.display = '';
-			document.getElementById('flowPauseBtn').innerHTML = 'Go back';
-
-			document.getElementById('title').innerHTML = 'Break time!';
+			var endMes = document.createElement('h4');
+			endMes.setAttribute('id', 'flowh4');
+			endMes.innerHTML = `Great job! Take 5 (small break)`;
+			document.getElementById('h4cont').appendChild(endMes);
 		} else if (flowCount === 4) {
-			document.getElementById(
-				'flowh4'
-			).innerHTML = `You've done so much! Have a long break <br> Flow Cycles: ${flowCount}`;
-			document.getElementById('flowh4').style.display = '';
+			var endMes = document.createElement('h4');
+			endMes.setAttribute('id', 'flowh4');
+			endMes.innerHTML = `Fantastic work! Relax and take a long break`;
+			document.getElementById('h4cont').appendChild(endMes);
 
-			document.getElementById('flowPauseBtn').innerHTML = 'Go back';
-			document.getElementById('title').innerHTML = 'Break time!';
 			flowCount = 0;
 		}
+
 		document.getElementById('flowTimer').innerHTML = flowTime;
+
 		return;
 	}
 
@@ -121,162 +151,153 @@ function flowStart() {
 
 function flowPause() {
 	paused = true;
-	played = true;
+	console.log('Pause!');
 
-	// dynamically creat start button
-
-	document.getElementById('flowPauseBtn').style.display = 'none';
+	// style handling
 	document.getElementById('flowStartBtn').style.display = '';
-	document.getElementById('flowBox').style.background = '#4a75ee';
-	document.getElementById('shortBox').style.display = '';
-	document.getElementById('longBox').style.display = '';
-
-	// keep timer consistent
-	var presentTime = document.getElementById('flowTimer').innerHTML;
-	var timeArray = presentTime.split(/[:]+/);
-	var m = timeArray[0];
-	var s = checkSecond(timeArray[1]);
-	document.getElementById('flowTimer').innerHTML = m + ':' + s;
+	document.getElementById('flowPauseBtn').style.display = 'none';
 }
 
 function shortStart() {
-	if (paused === true) {
-		return;
-	}
-	document.getElementById('shortStartBtn').style.display = 'none';
-	document.getElementById('shortBox').style.background = '#4a75ee';
-	document.getElementById('flowBox').style.display = 'none';
-	document.getElementById('longBox').style.display = 'none';
-
-	// dynamically create pause button
-	if (started === false && played === false) {
-		var pause = document.createElement('button');
-		pause.setAttribute('id', 'shortPauseBtn');
-		pause.setAttribute('class', 'pause');
-		pause.setAttribute('onclick', 'reset(); shortPause()');
-		pause.innerHTML = 'Pause';
-		document.getElementById('shortBox').appendChild(pause);
-		started = true;
-	} else if (started === false) {
-		document.getElementById('shortPauseBtn').style.display = '';
-	}
-
-	// timer setup
-	var presentTime = document.getElementById('shortTimer').innerHTML;
-	var timeArray = presentTime.split(/[:]+/);
-	var m = timeArray[0];
-	var s = checkSecond(timeArray[1] - 1);
-
-	if (s == 59) {
-		m = m - 1;
-	}
-	if (m < 0) {
-		soundAlarm();
-		document.getElementById('shortTimer').style.display = 'none';
-		document.getElementById('stimerDiv').style.display = 'none';
-		document.getElementById('shorth4').innerHTML = `Good break! Get back to work!`;
-		document.getElementById('shorth4').style.display = '';
-		document.getElementById('shortPauseBtn').innerHTML = 'Go back';
-
-		document.getElementById('title').innerHTML = 'Times up!';
-		return;
-	}
-
-	let timeLeft = (document.getElementById('shortTimer').innerHTML = m + ':' + s);
-
-	setTimeout(shortStart, 1000);
-
-	document.getElementById('title').innerHTML = 'Short Break: ' + timeLeft;
-}
-
-function shortPause() {
-	paused = true;
-	played = true;
-
-	// dynamically creat start button
-
-	document.getElementById('shortPauseBtn').style.display = 'none';
-	document.getElementById('shortStartBtn').style.display = '';
-	document.getElementById('shortBox').style.background = '#4a75ee';
-	document.getElementById('flowBox').style.display = '';
-	document.getElementById('longBox').style.display = '';
-
-	// keep timer consistent
-	var presentTime = document.getElementById('shortTimer').innerHTML;
-	var timeArray = presentTime.split(/[:]+/);
-	var m = timeArray[0];
-	var s = checkSecond(timeArray[1]);
-	document.getElementById('shortTimer').innerHTML = m + ':' + s;
-}
-
-function longStart() {
-	if (paused === true) {
-		return;
-	}
 	started = true;
+	if (paused === true) {
+		console.log("can't start, paused = true");
+		return;
+	}
 	if (hasPlayed === false) {
 		startTimer();
 		hasPlayed = true;
 	}
-	var active = document.getElementById('long');
-	var active1 = document.getElementById('flow');
-	var active2 = document.getElementById('short');
-	var pauseBtn = document.getElementById('pauseBtn');
 
-	active.style.background = '#4a75ee';
-	active.style.position = 'relative';
-	active.style.top = '0';
-	active1.style.display = 'none';
-	active2.style.display = 'none';
-	pauseBtn.style.display = 'none';
+	console.log('Start!');
+	// Style handling
+	document.getElementById('shortBox').style.background = '#4a75ee';
+	document.getElementById('shortPauseBtn').style.display = '';
+	document.getElementById('shortStartBtn').style.display = 'none';
+	document.getElementById('flowBox').style.display = 'none';
+	document.getElementById('longBox').style.display = 'none';
+	document.getElementById('shortBox').style.display = '';
 
-	let presentTime = document.getElementById('longTimer').innerHTML;
+	// timer
+	var presentTime = document.getElementById('shortTimer').innerHTML;
 	var timeArray = presentTime.split(/[:]+/);
 	var m = timeArray[0];
 	var s = checkSecond(timeArray[1] - 1);
 	if (s == 59) {
 		m = m - 1;
 	}
+
 	if (m < 0) {
 		soundAlarm();
-		let goBack = document.getElementById('pauseBtn');
-		goBack.innerHTML = 'Go back';
-		let shortBreak = document.getElementById('p3');
-		shortBreak.innerHTML = 'Hope you had a good break! Time to get back into the flow.';
-		document.getElementById('longTimer').innerHTML = longTime;
-		document.getElementById('title').innerHTML = 'Times up!';
-		document.getElementById('longTimer').style.display = 'none';
-		document.getElementById('ltimerDiv').style.display = 'none';
+		document.getElementById('shortPauseBtn').style.display = 'none';
+		var newButton = document.createElement('button');
+		newButton.innerHTML = 'Go Back';
+		newButton.setAttribute('id', 'goBack');
+		newButton.setAttribute('class', 'pause');
+		newButton.setAttribute('onclick', 'shortReset()');
+		document.getElementById('shortBox').appendChild(newButton);
+
+		// remove time text
+		document.getElementById('shortTimer').style.display = 'none';
+		document.getElementById('stimerDiv').style.display = 'none';
+
+		// display end message
+		var endMes = document.createElement('h4');
+		endMes.setAttribute('id', 'shorth4');
+		endMes.innerHTML = `Good break! You got this!`;
+		document.getElementById('sh4cont').appendChild(endMes);
+
+		document.getElementById('shortTimer').innerHTML = shortTime;
 
 		return;
 	}
 
+	// display time remaining in title
+	let timeLeft = (document.getElementById('shortTimer').innerHTML = m + ':' + s);
+
+	setTimeout(shortStart, 1000);
+	document.getElementById('title').innerHTML = 'Short Break:  ' + timeLeft;
+}
+
+function shortPause() {
+	paused = true;
+	console.log('Pause!');
+
+	// style handling
+	document.getElementById('shortStartBtn').style.display = '';
+	document.getElementById('shortPauseBtn').style.display = 'none';
+}
+
+function longStart() {
+	started = true;
+	if (paused === true) {
+		console.log("can't start, paused = true");
+		return;
+	}
+	if (hasPlayed === false) {
+		startTimer();
+		hasPlayed = true;
+	}
+
+	console.log('Start!');
+	// Style handling
+	document.getElementById('longBox').style.background = '#4a75ee';
+	document.getElementById('longPauseBtn').style.display = '';
+	document.getElementById('longStartBtn').style.display = 'none';
+	document.getElementById('flowBox').style.display = 'none';
+	document.getElementById('shortBox').style.display = 'none';
+
+	// timer
+	var presentTime = document.getElementById('longTimer').innerHTML;
+	var timeArray = presentTime.split(/[:]+/);
+	var m = timeArray[0];
+	var s = checkSecond(timeArray[1] - 1);
+	if (s == 59) {
+		m = m - 1;
+	}
+
+	if (m < 0) {
+		soundAlarm();
+		document.getElementById('longPauseBtn').style.display = 'none';
+		var newButton = document.createElement('button');
+		newButton.innerHTML = 'Go Back';
+		newButton.setAttribute('id', 'goBack');
+		newButton.setAttribute('class', 'pause');
+		newButton.setAttribute('onclick', 'longReset()');
+		document.getElementById('longBox').appendChild(newButton);
+
+		// remove time text
+		document.getElementById('longTimer').style.display = 'none';
+		document.getElementById('ltimerDiv').style.display = 'none';
+
+		// display end message
+		var endMes = document.createElement('h4');
+		endMes.setAttribute('id', 'longh4');
+		endMes.innerHTML = `Good break! You got this!`;
+		document.getElementById('lh4cont').appendChild(endMes);
+
+		document.getElementById('shortTimer').innerHTML = shortTime;
+
+		return;
+	}
+
+	// display time remaining in title
 	let timeLeft = (document.getElementById('longTimer').innerHTML = m + ':' + s);
 
 	setTimeout(longStart, 1000);
-	document.getElementById('title').innerHTML = 'Long Break: ' + timeLeft;
+	document.getElementById('title').innerHTML = 'Long Break:  ' + timeLeft;
 }
 
 function longPause() {
 	paused = true;
+	console.log('Pause!');
 
-	var inactive = document.getElementById('long');
-	var inactive1 = document.getElementById('flow');
-	var inactive2 = document.getElementById('short');
-
-	inactive.style.background = '#5769c5';
-	inactive.style.position = 'relative';
-	inactive.style.top = '-660px';
-	inactive1.style.display = '';
-	inactive2.style.display = '';
-
-	let presentTime = document.getElementById('longTimer').innerHTML;
-	var timeArray = presentTime.split(/[:]+/);
-	var m = timeArray[0];
-	var s = checkSecond(timeArray[1]);
-	document.getElementById('longTimer').innerHTML = m + ':' + s;
+	// style handling
+	document.getElementById('longStartBtn').style.display = '';
+	document.getElementById('longPauseBtn').style.display = 'none';
 }
 
+// this will make it so it doesn't display 60 and have a 0 before all numbers < 10
 function checkSecond(sec) {
 	if (sec < 10 && sec >= 0) {
 		sec = '0' + sec;
@@ -286,7 +307,6 @@ function checkSecond(sec) {
 	}
 	return sec;
 }
-
 function soundAlarm() {
 	let source = 'sounds/alarm.mp3';
 	let audio = document.createElement('audio');
