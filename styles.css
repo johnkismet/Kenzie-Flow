@@ -52,9 +52,10 @@ div {
 	margin: auto;
 	display: flex;
 	flex-flow: column;
-	transition: all 2s ease;
+
 	position: relative;
 	top: -50px;
+	transition: all 1s ease;
 }
 .shortBreak {
 	border-radius: 20px;
@@ -62,7 +63,7 @@ div {
 	width: 350px;
 	height: 80vh;
 	margin: auto;
-	transition: all 2s ease;
+	transition: all 1s ease;
 	position: relative;
 	top: -50px;
 }
@@ -135,4 +136,13 @@ h3 {
 }
 .pause:hover {
 	border-color: rgb(57, 57, 57);
+}
+.flowBox:hover {
+	background: #4a75ee;
+}
+.shortBreak:hover {
+	background: #4a75ee;
+}
+.longBreak:hover {
+	background: #4a75ee;
 }
