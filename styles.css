@@ -6,7 +6,7 @@
 }
 body {
 	overflow-x: hidden;
-	background: #3e5cad;
+	background: #425fa9;
 }
 div {
 	display: flex;
@@ -63,7 +63,7 @@ div {
 
 	position: relative;
 	top: -50px;
-	transition: all 2s ease;
+	transition: all 0.5s ease;
 }
 .shortBreak {
 	border-radius: 20px;
@@ -109,6 +109,7 @@ h2 {
 	font-size: 2rem;
 	color: #dbe9ee;
 	margin: auto;
+	text-align: center;
 }
 h4 {
 	text-align: center;
@@ -157,15 +158,6 @@ h3 {
 }
 .pause:hover {
 	border-color: rgb(57, 57, 57);
-}
-.flowBox:hover {
-	background: #4a75ee;
-}
-.shortBreak:hover {
-	background: #4a75ee;
-}
-.longBreak:hover {
-	background: #4a75ee;
 }
 .faqQ1 {
 	margin: 40px;

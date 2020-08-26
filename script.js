@@ -17,6 +17,13 @@ console.log(paused);
 document.getElementById('flowPauseBtn').style.display = 'none';
 document.getElementById('shortPauseBtn').style.display = 'none';
 document.getElementById('longPauseBtn').style.display = 'none';
+document.getElementById('timerDiv').style.display = 'none';
+document.getElementById('stimerDiv').style.display = 'none';
+document.getElementById('ltimerDiv').style.display = 'none';
+document.getElementById('flowh2').style.fontSize = '70px';
+document.getElementById('shorth2').style.fontSize = '70px';
+document.getElementById('longh2').style.fontSize = '70px';
+// document.getElementById('flowh2').style.font-size = 20;
 
 // functions
 
@@ -86,6 +93,7 @@ function flowStart() {
 		startTimer();
 		hasPlayed = true;
 	}
+	document.getElementById('timerDiv').style.display = '';
 
 	console.log('Start!');
 	// Style handling
@@ -177,6 +185,7 @@ function shortStart() {
 	document.getElementById('flowBox').style.display = 'none';
 	document.getElementById('longBox').style.display = 'none';
 	document.getElementById('shortBox').style.display = '';
+	document.getElementById('stimerDiv').style.display = '';
 
 	// timer
 	var presentTime = document.getElementById('shortTimer').innerHTML;
@@ -246,6 +255,7 @@ function longStart() {
 	document.getElementById('longStartBtn').style.display = 'none';
 	document.getElementById('flowBox').style.display = 'none';
 	document.getElementById('shortBox').style.display = 'none';
+	document.getElementById('ltimerDiv').style.display = '';
 
 	// timer
 	var presentTime = document.getElementById('longTimer').innerHTML;
