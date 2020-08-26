@@ -28,7 +28,7 @@ function unstart() {
 }
 
 function flowReset() {
-	document.getElementById('flowTimer').innerHTML = 00 + ':' + '03';
+	document.getElementById('flowTimer').innerHTML = 25 + ':' + '00';
 	document.getElementById('flowPauseBtn').style.display = 'none';
 	document.getElementById('flowStartBtn').style.display = '';
 	document.getElementById('shortBox').style.display = '';
@@ -45,7 +45,7 @@ function flowReset() {
 }
 
 function shortReset() {
-	document.getElementById('shortTimer').innerHTML = 00 + ':' + '03';
+	document.getElementById('shortTimer').innerHTML = 5 + ':' + '00';
 	document.getElementById('shortPauseBtn').style.display = 'none';
 	document.getElementById('shortStartBtn').style.display = '';
 	document.getElementById('flowBox').style.display = '';
@@ -61,7 +61,7 @@ function shortReset() {
 }
 
 function longReset() {
-	document.getElementById('longTimer').innerHTML = 00 + ':' + '03';
+	document.getElementById('longTimer').innerHTML = 15 + ':' + '00';
 	document.getElementById('longPauseBtn').style.display = 'none';
 	document.getElementById('longStartBtn').style.display = '';
 	document.getElementById('flowBox').style.display = '';
