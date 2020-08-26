@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
 }
 body {
 	overflow-x: hidden;
@@ -24,6 +25,7 @@ div {
 	top: 20px;
 	left: 20px;
 	font-size: 100px;
+	font-weight: bold;
 	text-decoration: none;
 }
 .navAbout {
@@ -46,7 +48,13 @@ div {
 }
 .flowBox {
 	border-radius: 20px;
-	background: rgba(87, 105, 197, 0.87);
+	background: rgb(51, 141, 223);
+	background: linear-gradient(
+		0deg,
+		rgba(51, 141, 223, 1) 0%,
+		rgba(43, 144, 236, 1) 0%,
+		rgba(255, 255, 255, 0.10717790534182425) 100%
+	);
 	width: 350px;
 	height: 80vh;
 	margin: auto;
@@ -55,25 +63,38 @@ div {
 
 	position: relative;
 	top: -50px;
-	transition: all 1s ease;
+	transition: all 2s ease;
 }
 .shortBreak {
 	border-radius: 20px;
-	background: rgba(87, 105, 197, 0.87);
+	background: rgb(51, 141, 223);
+	background: linear-gradient(
+		0deg,
+		rgba(51, 141, 223, 1) 0%,
+		rgba(43, 144, 236, 1) 0%,
+		rgba(255, 255, 255, 0.10717790534182425) 100%
+	);
 	width: 350px;
 	height: 80vh;
 	margin: auto;
 	transition: all 1s ease;
 	position: relative;
 	top: -50px;
+	transition: all 2s ease;
 }
 .longBreak {
-	background: rgba(87, 105, 197, 0.87);
+	background: rgb(51, 141, 223);
+	background: linear-gradient(
+		0deg,
+		rgba(51, 141, 223, 1) 0%,
+		rgba(43, 144, 236, 1) 0%,
+		rgba(255, 255, 255, 0.10717790534182425) 100%
+	);
 	border-radius: 20px;
 	width: 350px;
 	height: 80vh;
 	margin: auto;
-	transition: all 1s ease;
+	transition: all 2s ease;
 	position: relative;
 	top: -50px;
 }
@@ -145,4 +166,21 @@ h3 {
 }
 .longBreak:hover {
 	background: #4a75ee;
+}
+.faqQ1 {
+	margin: 40px;
+}
+.faqQ1 {
+	text-align: center;
+	margin: auto;
+	padding: 20px;
+	color: white;
+	font-size: 4rem;
+}
+.faqA1 {
+	text-align: center;
+	margin: auto;
+	padding: 20px;
+	color: white;
+	font-size: 2rem;
 }

@@ -7,3 +7,6 @@ Track the tasks the user writes in (to-do list)
 Work with Slack to change their status to either working or breaking
 
 Settings tab to change timing
+
+Toggleable music
+
