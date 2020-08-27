@@ -1,7 +1,7 @@
 // default timer values
-let flowTime = (document.getElementById('flowTimer').innerHTML = 00 + ':' + '03');
-let shortTime = (document.getElementById('shortTimer').innerHTML = 00 + ':' + '03');
-let longTime = (document.getElementById('longTimer').innerHTML = 0 + ':' + '03');
+let flowTime = (document.getElementById('flowTimer').innerHTML = 25 + ':' + '00');
+let shortTime = (document.getElementById('shortTimer').innerHTML = 5 + ':' + '00');
+let longTime = (document.getElementById('longTimer').innerHTML = 15 + ':' + '00');
 
 // global variables
 let flowCount = 0;
