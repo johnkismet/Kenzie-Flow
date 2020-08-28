@@ -11,3 +11,12 @@ Work with Slack to change their status to either working or breaking
 Settings tab to change timing
 
 Toggleable music
+
+Change background color on breaks
+
+
+ISSUES ---------
+
+Compatibility (safari)
+Footer border collides with Long break button
+Variable names not unique enough (maybe?)
