@@ -2,17 +2,13 @@ TO DO ---------
 
 Display messages of fun stuff to do/read/watch on breaks
 
-Have a timer animation that activates when that timer is on
+Timer animation
 
 Track the tasks the user writes in (to-do list)
 
 Work with Slack to change their status to either working or breaking
 
-Settings tab to change timing
-
-Toggleable music
-
-Change background color on breaks
+Settings tab to change timing (ASK!)
 
 
 ISSUES ---------

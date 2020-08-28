@@ -172,10 +172,13 @@ function shortStart() {
 		startTimer();
 		hasPlayed = true;
 	}
+	document.getElementById('body').style.background = 'rgb(48, 197, 162)';
+	document.getElementById('navbar').style.background = 'rgb(48, 197, 162)';
+	document.getElementById('shortBox').style.background = 'rgb(80, 192, 130)';
 	document.getElementById('stimerDiv').style.display = '';
 	document.getElementById('shortTimer').style.display = '';
 	// Style handling
-	document.getElementById('shortBox').style.background = '#4a75ee';
+
 	document.getElementById('shortPauseBtn').style.display = '';
 	document.getElementById('shortStartBtn').style.display = 'none';
 	document.getElementById('flowBox').style.display = 'none';
@@ -243,7 +246,9 @@ function longStart() {
 	}
 
 	// Style handling
-	document.getElementById('longBox').style.background = '#4a75ee';
+	document.getElementById('body').style.background = 'rgb(113, 46, 212)';
+	document.getElementById('navbar').style.background = 'rgb(113, 46, 212)';
+	document.getElementById('longBox').style.background = 'rgb(109, 67, 172)';
 	document.getElementById('longPauseBtn').style.display = '';
 	document.getElementById('longStartBtn').style.display = 'none';
 	document.getElementById('flowBox').style.display = 'none';

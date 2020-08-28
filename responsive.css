@@ -7,6 +7,7 @@
 body {
 	overflow-x: hidden;
 	background: #425fa9;
+	transition: all 2s ease;
 }
 div {
 	display: flex;
@@ -16,8 +17,10 @@ div {
 }
 .navbar {
 	background: #5a86cf;
+
 	width: 100%;
 	height: 120px;
+	transition: all 2s ease;
 }
 .navh1 {
 	color: #dbe9ee;
@@ -70,17 +73,12 @@ div {
 
 	position: relative;
 	top: -50px;
-	transition: all 0.5s ease;
+	transition: all 2s ease;
 }
 .shortBreak {
 	border-radius: 20px;
 	background: rgb(51, 141, 223);
-	background: linear-gradient(
-		0deg,
-		rgba(51, 141, 223, 1) 0%,
-		rgba(43, 144, 236, 1) 0%,
-		rgba(255, 255, 255, 0.10717790534182425) 100%
-	);
+	background: linear-gradient(0deg, rgb(48, 197, 162) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 	width: 350px;
 	height: 80vh;
 	margin: 80px auto;
@@ -91,12 +89,7 @@ div {
 }
 .longBreak {
 	background: rgb(51, 141, 223);
-	background: linear-gradient(
-		0deg,
-		rgba(51, 141, 223, 1) 0%,
-		rgba(43, 144, 236, 1) 0%,
-		rgba(255, 255, 255, 0.10717790534182425) 100%
-	);
+	background: linear-gradient(0deg, rgb(113, 46, 212) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 	border-radius: 20px;
 	width: 350px;
 	height: 80vh;
@@ -124,28 +117,40 @@ h4 {
 	font-size: 1.5rem;
 }
 .pause {
-	color: #402c2c;
+	color: #ffffff;
 	width: 60%;
 	height: 50px;
-	border-radius: 20px;
-	background: #b54242;
 	margin: auto;
 	font-size: 2rem;
 	cursor: pointer;
-	transition: all 0.5s ease;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	border-radius: 20px;
+	background: rgb(204, 44, 44);
+	box-shadow: rgb(105, 18, 18) 0px 6px 0px;
+	border-width: initial;
+	border-style: none;
+	border-color: initial;
+	border-image: initial;
+	transition: color 0.5s ease-in-out 0s;
 }
 .start {
 	color: #d4e2db;
 	width: 60%;
 	height: 50px;
-	border-radius: 20px;
-	background: #47bd80;
 	margin: auto;
 	font-size: 2rem;
 	cursor: pointer;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	transition: all 0.5s ease;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	border-radius: 20px;
+	background: rgb(44, 204, 103);
+	box-shadow: rgb(34, 149, 76) 0px 6px 0px;
+	border-width: initial;
+	border-style: none;
+	border-color: initial;
+	border-image: initial;
+	transition: color 0.5s ease-in-out 0s;
 }
 .time {
 	font-size: 2rem;
@@ -259,12 +264,7 @@ footer {
 	.shortBreak {
 		border-radius: 20px;
 		background: rgb(51, 141, 223);
-		background: linear-gradient(
-			0deg,
-			rgba(51, 141, 223, 1) 0%,
-			rgba(43, 144, 236, 1) 0%,
-			rgba(255, 255, 255, 0.10717790534182425) 100%
-		);
+		background: linear-gradient(0deg, rgb(48, 197, 162) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 		width: 550px;
 		height: 40vh;
 		margin: 20px auto;
@@ -274,12 +274,7 @@ footer {
 	}
 	.longBreak {
 		background: rgb(51, 141, 223);
-		background: linear-gradient(
-			0deg,
-			rgba(51, 141, 223, 1) 0%,
-			rgba(43, 144, 236, 1) 0%,
-			rgba(255, 255, 255, 0.10717790534182425) 100%
-		);
+		background: linear-gradient(0deg, rgb(113, 46, 212) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 		border-radius: 20px;
 		width: 550px;
 		height: 40vh;
@@ -439,12 +434,7 @@ footer {
 	.shortBreak {
 		border-radius: 20px;
 		background: rgb(51, 141, 223);
-		background: linear-gradient(
-			0deg,
-			rgba(51, 141, 223, 1) 0%,
-			rgba(43, 144, 236, 1) 0%,
-			rgba(255, 255, 255, 0.10717790534182425) 100%
-		);
+		background: linear-gradient(0deg, rgb(48, 197, 162) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 		width: 450px;
 		height: 40vh;
 		margin: 20px auto;
@@ -454,12 +444,7 @@ footer {
 	}
 	.longBreak {
 		background: rgb(51, 141, 223);
-		background: linear-gradient(
-			0deg,
-			rgba(51, 141, 223, 1) 0%,
-			rgba(43, 144, 236, 1) 0%,
-			rgba(255, 255, 255, 0.10717790534182425) 100%
-		);
+		background: linear-gradient(0deg, rgb(113, 46, 212) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 		border-radius: 20px;
 		width: 450px;
 		height: 40vh;
@@ -620,12 +605,7 @@ footer {
 	.shortBreak {
 		border-radius: 20px;
 		background: rgb(51, 141, 223);
-		background: linear-gradient(
-			0deg,
-			rgba(51, 141, 223, 1) 0%,
-			rgba(43, 144, 236, 1) 0%,
-			rgba(255, 255, 255, 0.10717790534182425) 100%
-		);
+		background: linear-gradient(0deg, rgb(48, 197, 162) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 		width: 250px;
 		height: 50vh;
 		margin: 20px auto;
@@ -635,12 +615,7 @@ footer {
 	}
 	.longBreak {
 		background: rgb(51, 141, 223);
-		background: linear-gradient(
-			0deg,
-			rgba(51, 141, 223, 1) 0%,
-			rgba(43, 144, 236, 1) 0%,
-			rgba(255, 255, 255, 0.10717790534182425) 100%
-		);
+		background: linear-gradient(0deg, rgb(113, 46, 212) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 		border-radius: 20px;
 		width: 250px;
 		height: 50vh;
@@ -721,6 +696,6 @@ footer {
 		text-align: center;
 	}
 	#goBack {
-		font-size: 1rem;
+		font-size: 1.5rem;
 	}
 }
