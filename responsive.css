@@ -159,24 +159,6 @@ h4 {
 .pause:hover {
 	border-color: rgb(57, 57, 57);
 }
-/* .faqQ1 {
-	margin: 40px;
-}
-.faqQ1 {
-	text-align: center;
-	margin: auto;
-	padding: 20px;
-	color: white;
-	font-size: 4rem;
-}
-.faqA1 {
-	text-align: center;
-	margin: auto;
-	padding: 20px;
-	color: white;
-	font-size: 2rem;
-	line-height: 60px;
-} */
 footer {
 	position: relative;
 	top: -200px;
@@ -187,6 +169,8 @@ footer {
 	width: 1300px;
 	height: 100%;
 	line-height: 70px;
+	position: relative;
+	top: 0px;
 }
 .credits {
 	font-size: 1.4rem;
@@ -264,7 +248,7 @@ footer {
 			rgba(255, 255, 255, 0.10717790534182425) 100%
 		);
 		width: 550px;
-		height: 40vh;
+		height: 50vh;
 		margin: 30px auto;
 		display: flex;
 		flex-flow: column;
@@ -358,32 +342,15 @@ footer {
 	.pause:hover {
 		border-color: rgb(57, 57, 57);
 	}
-	/* .faqQ1 {
-		margin: 40px;
-	}
-	.faqQ1 {
-		text-align: center;
-		margin: auto;
-		padding: 20px;
-		color: white;
-		font-size: 4rem;
-	}
-	.faqA1 {
-		text-align: center;
-		margin: auto;
-		padding: 20px;
-		color: white;
-		font-size: 2rem;
-		line-height: 60px;
-    } */
-
 	footer {
 		text-align: center;
 		color: white;
 		font-size: 2rem;
-		margin: 200px auto;
+		margin: 500px auto;
 		width: 690px;
 		height: 100%;
+		position: relative;
+		top: 0px;
 	}
 	.credits {
 		font-size: 1rem;
@@ -555,32 +522,16 @@ footer {
 	.pause:hover {
 		border-color: rgb(57, 57, 57);
 	}
-	/* .faqQ1 {
-		margin: 40px;
-	}
-	.faqQ1 {
-		text-align: center;
-		margin: auto;
-		padding: 20px;
-		color: white;
-		font-size: 4rem;
-	}
-	.faqA1 {
-		text-align: center;
-		margin: auto;
-		padding: 20px;
-		color: white;
-		font-size: 2rem;
-		line-height: 60px;
-    } */
 
 	footer {
 		text-align: center;
 		color: white;
 		font-size: 2rem;
-		margin: 200px auto;
+		margin: 340px auto;
 		width: 390px;
 		height: 100%;
+		position: relative;
+		top: 0px;
 	}
 	.credits {
 		font-size: 0.8rem;
@@ -658,7 +609,7 @@ footer {
 			rgba(255, 255, 255, 0.10717790534182425) 100%
 		);
 		width: 250px;
-		height: 40vh;
+		height: 50vh;
 		margin: 30px auto;
 		display: flex;
 		flex-flow: column;
@@ -676,7 +627,7 @@ footer {
 			rgba(255, 255, 255, 0.10717790534182425) 100%
 		);
 		width: 250px;
-		height: 40vh;
+		height: 50vh;
 		margin: 20px auto;
 		transition: all 1s ease;
 		position: relative;
@@ -692,7 +643,7 @@ footer {
 		);
 		border-radius: 20px;
 		width: 250px;
-		height: 40vh;
+		height: 50vh;
 		margin: 20px auto;
 		transition: all 2s ease;
 		position: relative;
@@ -752,32 +703,15 @@ footer {
 	.pause:hover {
 		border-color: rgb(57, 57, 57);
 	}
-	/* .faqQ1 {
-		margin: 40px;
-	}
-	.faqQ1 {
-		text-align: center;
-		margin: auto;
-		padding: 20px;
-		color: white;
-		font-size: 4rem;
-	}
-	.faqA1 {
-		text-align: center;
-		margin: auto;
-		padding: 20px;
-		color: white;
-		font-size: 2rem;
-		line-height: 60px;
-    } */
-
 	footer {
 		text-align: center;
 		color: white;
 		font-size: 1rem;
-		margin: 200px auto;
+		margin: 550px auto;
 		width: 290px;
-		height: 60%;
+		height: 200vh;
+		position: relative;
+		top: 0px;
 	}
 	.credits {
 		font-size: 0.5rem;
@@ -785,5 +719,8 @@ footer {
 		top: 1630px;
 		left: 0px;
 		text-align: center;
+	}
+	#goBack {
+		font-size: 1rem;
 	}
 }
