@@ -11,12 +11,16 @@
 
    <body id="body">
 
+      <!-- Modal content -->
+      
+
 
       <nav id="navbar" class="navbar">
          <h1 class="navh1">Kenzie<em>FLOW</em></h1>
          <a href="#about"class="navAbout">Click here to learn more about Kenzie FLOW</a>
+         
       </nav>
-
+ 
       <div class="containers">
 
 
@@ -65,7 +69,32 @@
          </div>
       </div>
 
+               <!-- Trigger/Open The Modal -->
+
 <footer>
+   <button id="myBtn"><i class="fas fa-cog"></i></button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2>Settings</h2>
+    </div>
+    <div class="modal-body">
+      <label for="flowTimer">Flow Time:</label>
+      <input placeholder="25" type="number" name="flowTimer" id="userFlow">
+      <label for="shortTimer">Short Time:</label>
+      <input placeholder="25" type="number" name="shortTimer" id="userShort">
+      <label for="longTimer">Long Time:</label>
+      <input placeholder="25" type="number" name="longTimer" id="userLong">
+      <input class="submit" type="submit" value="Submit">
+    </div>
+  </div>
+
+</div>
    <h3 class="credits">Made by John Anderson & Russ Livermore <br> Kenzie Academy SE July 2020 Cohort</h3>
       <div class="about" id="about">
          <h1 class="faqQ1">How does this work?</h1>

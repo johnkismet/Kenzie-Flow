@@ -2,7 +2,7 @@ TO DO ---------
 
 Display messages of fun stuff to do/read/watch on breaks
 
-Timer animation
+Timer animation (bar that spans across page as timer gets near the end)
 
 Track the tasks the user writes in (to-do list)
 
