@@ -11,8 +11,11 @@ Work with Slack to change their status to either working or breaking
 Settings tab to change timing (ASK!)
 
 
+
+
 ISSUES ---------
 
 Compatibility (safari)
 Footer border collides with Long break button
 Variable names not unique enough (maybe?)
+Navbar doesn't span the full length on 000webhost (ASK!)

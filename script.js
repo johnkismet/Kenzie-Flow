@@ -127,6 +127,8 @@ function flowStart() {
 	document.getElementById('flowStartBtn').style.display = 'none';
 	document.getElementById('shortBox').style.display = 'none';
 	document.getElementById('longBox').style.display = 'none';
+	document.getElementById('shortBox').style.background = '';
+	document.getElementById('longBox').style.background = '';
 
 	// timer
 	var presentTime = document.getElementById('flowTimer').innerHTML;
@@ -188,6 +190,8 @@ function flowPause() {
 	// style handling
 	document.getElementById('flowStartBtn').style.display = '';
 	document.getElementById('flowPauseBtn').style.display = 'none';
+	document.getElementById('shortBox').style.display = '';
+	document.getElementById('longBox').style.display = '';
 }
 
 function shortStart() {
@@ -202,6 +206,8 @@ function shortStart() {
 	document.getElementById('body').style.background = 'rgb(48, 197, 162)';
 	document.getElementById('navbar').style.background = 'rgb(48, 197, 162)';
 	document.getElementById('shortBox').style.background = 'rgb(80, 192, 130)';
+	document.getElementById('flowBox').style.background = '';
+	document.getElementById('longBox').style.background = '';
 	document.getElementById('stimerDiv').style.display = '';
 	document.getElementById('shortTimer').style.display = '';
 	// Style handling
@@ -260,6 +266,10 @@ function shortPause() {
 	// style handling
 	document.getElementById('shortStartBtn').style.display = '';
 	document.getElementById('shortPauseBtn').style.display = 'none';
+	document.getElementById('flowBox').style.display = '';
+	document.getElementById('longBox').style.display = '';
+	document.getElementById('body').style.background = '';
+	document.getElementById('navbar').style.background = '';
 }
 
 function longStart() {
@@ -282,6 +292,8 @@ function longStart() {
 	document.getElementById('shortBox').style.display = 'none';
 	document.getElementById('ltimerDiv').style.display = '';
 	document.getElementById('longTimer').style.display = '';
+	document.getElementById('flowBox').style.background = '';
+	document.getElementById('shortBox').style.background = '';
 
 	// timer
 	var presentTime = document.getElementById('longTimer').innerHTML;
@@ -330,6 +342,10 @@ function longPause() {
 	// style handling
 	document.getElementById('longStartBtn').style.display = '';
 	document.getElementById('longPauseBtn').style.display = 'none';
+	document.getElementById('shortBox').style.display = '';
+	document.getElementById('flowBox').style.display = '';
+	document.getElementById('body').style.background = '';
+	document.getElementById('navbar').style.background = '';
 }
 
 // this will make it so it doesn't display 60 and have a 0 before all numbers < 10
