@@ -7,6 +7,8 @@ Timer animation (bar that spans across page as timer gets near the end)
 Track the tasks the user writes in (to-do list)
 
 Work with Slack to change their status to either working or breaking
+    Sets to either Working, On a Short Break, or On a Long Break
+    If working notifications are disabled (?)
 
 Settings tab to change timing (ASK!)
 

@@ -22,6 +22,7 @@ body {
 .fas:hover {
 	color: rgb(172, 172, 172);
 }
+
 .modal {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
@@ -231,7 +232,7 @@ h4 {
 	font-weight: bold;
 	border-radius: 20px;
 	background: rgb(204, 44, 44);
-	box-shadow: rgb(105, 18, 18) 0px 6px 0px;
+	box-shadow: rgb(105, 18, 18) 0px 2px 0px;
 	border-width: initial;
 	border-style: none;
 	border-color: initial;
@@ -263,12 +264,13 @@ h4 {
 	text-align: center;
 }
 .start:hover {
-	border-color: white;
+	background: #3fc07d;
 }
 .pause:hover {
-	border-color: rgb(57, 57, 57);
+	background: rgb(206, 37, 37);
 }
 footer {
+	border: 1px solid red;
 	position: relative;
 	top: -200px;
 	text-align: left;
@@ -370,7 +372,7 @@ footer {
 		background: rgb(51, 141, 223);
 		background: linear-gradient(0deg, rgb(48, 197, 162) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 		width: 550px;
-		height: 40vh;
+		height: 50vh;
 		margin: 20px auto;
 		transition: all 1s ease;
 		position: relative;
@@ -381,7 +383,7 @@ footer {
 		background: linear-gradient(0deg, rgb(113, 46, 212) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 		border-radius: 20px;
 		width: 550px;
-		height: 40vh;
+		height: 50vh;
 		margin: 20px auto;
 		transition: all 2s ease;
 		position: relative;
@@ -421,6 +423,7 @@ footer {
 		width: 60%;
 		height: 50px;
 		border-radius: 20px;
+
 		background: #47bd80;
 		margin: auto;
 		font-size: 2rem;
@@ -436,7 +439,7 @@ footer {
 		text-align: center;
 	}
 	.start:hover {
-		border-color: white;
+		background: #44c783;
 	}
 	.pause:hover {
 		border-color: rgb(57, 57, 57);
@@ -527,7 +530,7 @@ footer {
 			rgba(255, 255, 255, 0.10717790534182425) 100%
 		);
 		width: 450px;
-		height: 40vh;
+		height: 50vh;
 		margin: 30px auto;
 		display: flex;
 		flex-flow: column;
@@ -540,7 +543,7 @@ footer {
 		background: rgb(51, 141, 223);
 		background: linear-gradient(0deg, rgb(48, 197, 162) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 		width: 450px;
-		height: 40vh;
+		height: 50vh;
 		margin: 20px auto;
 		transition: all 1s ease;
 		position: relative;
@@ -551,7 +554,7 @@ footer {
 		background: linear-gradient(0deg, rgb(113, 46, 212) 0%, rgba(255, 255, 255, 0.10717790534182425) 100%);
 		border-radius: 20px;
 		width: 450px;
-		height: 40vh;
+		height: 50vh;
 		margin: 20px auto;
 		transition: all 2s ease;
 		position: relative;
