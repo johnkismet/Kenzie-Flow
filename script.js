@@ -126,10 +126,10 @@ function flowStart() {
   document.getElementById("longBox").style.background = "";
 
   // timer
-  let presentTime = document.getElementById("flowTimer").innerHTML;
-  let timeArray = presentTime.split(/[:]+/);
-  let m = timeArray[0];
-  let s = checkSecond(timeArray[1] - 1);
+  var presentTime = document.getElementById("flowTimer").innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond(timeArray[1] - 1);
   if (s == 59) {
     m = m - 1;
   }
@@ -140,12 +140,12 @@ function flowStart() {
     console.log(`Flow count: ${flowCount}`);
 
     document.getElementById("flowPauseBtn").style.display = "none";
-    let newButton = document.createElement("button");
+    var newButton = document.createElement("button");
     newButton.innerHTML = "Go Back";
     newButton.setAttribute("id", "goBack");
     newButton.setAttribute("class", "pause");
     newButton.setAttribute("onclick", "flowReset()");
-    // let box = getElementById('flowBox');
+    // var box = getElementById('flowBox');
     document.getElementById("flowBox").appendChild(newButton);
 
     // remove time text
@@ -154,12 +154,12 @@ function flowStart() {
 
     // display end message
     if (flowCount < 4) {
-      let endMes = document.createElement("h4");
+      var endMes = document.createElement("h4");
       endMes.setAttribute("id", "flowh4");
       endMes.innerHTML = `Great job! Take 5 (small break)`;
       document.getElementById("h4cont").appendChild(endMes);
     } else if (flowCount === 4) {
-      let endMes = document.createElement("h4");
+      var endMes = document.createElement("h4");
       endMes.setAttribute("id", "flowh4");
       endMes.innerHTML = `Fantastic work! Relax and take a long break`;
       document.getElementById("h4cont").appendChild(endMes);
@@ -215,10 +215,10 @@ function shortStart() {
   document.getElementById("stimerDiv").style.display = "";
 
   // timer
-  let presentTime = document.getElementById("shortTimer").innerHTML;
-  let timeArray = presentTime.split(/[:]+/);
-  let m = timeArray[0];
-  let s = checkSecond(timeArray[1] - 1);
+  var presentTime = document.getElementById("shortTimer").innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond(timeArray[1] - 1);
   if (s == 59) {
     m = m - 1;
   }
@@ -226,7 +226,7 @@ function shortStart() {
   if (m < 0) {
     soundAlarm();
     document.getElementById("shortPauseBtn").style.display = "none";
-    let newButton = document.createElement("button");
+    var newButton = document.createElement("button");
     newButton.innerHTML = "Go Back";
     newButton.setAttribute("id", "goBack");
     newButton.setAttribute("class", "pause");
@@ -238,7 +238,7 @@ function shortStart() {
     document.getElementById("stimerDiv").style.display = "none";
 
     // display end message
-    let endMes = document.createElement("h4");
+    var endMes = document.createElement("h4");
     endMes.setAttribute("id", "shorth4");
     endMes.innerHTML = `Good break! You got this!`;
     document.getElementById("sh4cont").appendChild(endMes);
@@ -292,10 +292,10 @@ function longStart() {
   document.getElementById("shortBox").style.background = "";
 
   // timer
-  let presentTime = document.getElementById("longTimer").innerHTML;
-  let timeArray = presentTime.split(/[:]+/);
-  let m = timeArray[0];
-  let s = checkSecond(timeArray[1] - 1);
+  var presentTime = document.getElementById("longTimer").innerHTML;
+  var timeArray = presentTime.split(/[:]+/);
+  var m = timeArray[0];
+  var s = checkSecond(timeArray[1] - 1);
   if (s == 59) {
     m = m - 1;
   }
@@ -303,7 +303,7 @@ function longStart() {
   if (m < 0) {
     soundAlarm();
     document.getElementById("longPauseBtn").style.display = "none";
-    let newButton = document.createElement("button");
+    var newButton = document.createElement("button");
     newButton.innerHTML = "Go Back";
     newButton.setAttribute("id", "goBack");
     newButton.setAttribute("class", "pause");
@@ -315,7 +315,7 @@ function longStart() {
     document.getElementById("ltimerDiv").style.display = "none";
 
     // display end message
-    let endMes = document.createElement("h4");
+    var endMes = document.createElement("h4");
     endMes.setAttribute("id", "longh4");
     endMes.innerHTML = `Good break! You got this!`;
     document.getElementById("lh4cont").appendChild(endMes);
