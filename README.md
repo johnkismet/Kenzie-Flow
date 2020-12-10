@@ -7,8 +7,6 @@ Kenzie Flow is a free time tracker/break balancer for all Kenzie students to tra
 
 ## TODOs
 
----
-
 - Display messages of fun stuff to do/read/watch on breaks
 
 - Timer animation (bar that spans across page as timer gets near the end)
@@ -29,8 +27,6 @@ Kenzie Flow is a free time tracker/break balancer for all Kenzie students to tra
 <br>
 
 ## ISSUES
-
----
 
 - Compatibility (safari)
 - Footer border collides with Long break button
